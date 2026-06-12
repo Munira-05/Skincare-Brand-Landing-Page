@@ -7,38 +7,30 @@
 <meta name="theme-color" content="#a3ac9b">
 <title>Velora Skin – بشرة صافية خلال ٣٠ يوم</title>
 
-<!-- ========== PRELOAD CRITICAL ASSETS ========== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-<!-- ========== TIKTOK PIXEL — استبدلي YOUR_PIXEL_ID ========== -->
 <script>
 !function (w, d, t) {
   w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-
-  // ttq.load('YOUR_TIKTOK_PIXEL_ID');  // ← فعّليها بعد إضافة الـ ID
+  // ttq.load('YOUR_TIKTOK_PIXEL_ID');
   // ttq.page();
 }(window, document, 'ttq');
 </script>
 
-<!-- ========== META (FACEBOOK) PIXEL — استبدلي YOUR_PIXEL_ID ========== -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
-// fbq('init', 'YOUR_META_PIXEL_ID');  // ← فعّليها بعد إضافة الـ ID
+// fbq('init', 'YOUR_META_PIXEL_ID');
 // fbq('track', 'PageView');
 </script>
 
 <style>
-/* ============================================
-   DESIGN TOKENS
-   ============================================ */
 :root {
-  /* Colors */
   --color-bg: #ffffff;
   --color-beige: #e6d6c0;
   --color-beige-light: #f3eadd;
@@ -49,38 +41,25 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
   --color-text: #2a2a2a;
   --color-text-muted: #6b6b6b;
   --color-text-light: #9a9a9a;
-
-  /* Typography */
   --font-display: 'Markazi Text', 'Tajawal', serif;
   --font-body: 'Tajawal', sans-serif;
-
-  /* Spacing */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2.5rem;
   --space-xl: 4rem;
   --space-2xl: 6rem;
-
-  /* Radius */
   --r-sm: 8px;
   --r-md: 16px;
   --r-lg: 24px;
   --r-full: 999px;
-
-  /* Shadows — soft, premium */
   --shadow-sm: 0 2px 8px rgba(77, 85, 71, 0.04);
   --shadow-md: 0 8px 32px rgba(77, 85, 71, 0.08);
   --shadow-lg: 0 20px 60px rgba(77, 85, 71, 0.12);
-
-  /* Easing */
   --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* ============================================
-   RESET + BASE
-   ============================================ */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
@@ -95,7 +74,6 @@ body {
 img { max-width: 100%; display: block; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 a { color: inherit; text-decoration: none; }
-
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 600;
@@ -103,21 +81,9 @@ h1, h2, h3, h4 {
   letter-spacing: -0.01em;
 }
 
-/* ============================================
-   UTILITIES
-   ============================================ */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-.section {
-  padding: var(--space-xl) 0;
-}
-@media (min-width: 768px) {
-  .section { padding: var(--space-2xl) 0; }
-}
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
+.section { padding: var(--space-xl) 0; }
+@media (min-width: 768px) { .section { padding: var(--space-2xl) 0; } }
 
 .eyebrow {
   display: inline-block;
@@ -129,9 +95,6 @@ h1, h2, h3, h4 {
   margin-bottom: var(--space-sm);
 }
 
-/* ============================================
-   BUTTONS / CTA
-   ============================================ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -160,18 +123,9 @@ h1, h2, h3, h4 {
   color: var(--color-sage-deep);
   border: 1.5px solid var(--color-sage-dark);
 }
-.btn-secondary:hover {
-  background: var(--color-sage-dark);
-  color: white;
-}
-.btn-large {
-  padding: 1.1rem 2.25rem;
-  font-size: 1rem;
-}
+.btn-secondary:hover { background: var(--color-sage-dark); color: white; }
+.btn-large { padding: 1.1rem 2.25rem; font-size: 1rem; }
 
-/* ============================================
-   HEADER
-   ============================================ */
 .header {
   position: fixed;
   top: 0;
@@ -184,13 +138,7 @@ h1, h2, h3, h4 {
   border-bottom: 1px solid rgba(0,0,0,0.04);
   transition: all 0.3s var(--ease-soft);
 }
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-‎/* لأن dir=rtl: العنصر الأول في الـ HTML يطلع على اليمين */
+.header-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
 .logo {
   font-family: var(--font-display);
   font-size: 1.5rem;
@@ -201,24 +149,13 @@ h1, h2, h3, h4 {
   align-items: center;
   gap: 0.4rem;
 }
-.logo-dot {
-  width: 8px; height: 8px;
-  background: var(--color-sage);
-  border-radius: 50%;
-  display: inline-block;
-}
-.header .btn {
-  padding: 0.65rem 1.25rem;
-  font-size: 0.85rem;
-}
+.logo-dot { width: 8px; height: 8px; background: var(--color-sage); border-radius: 50%; display: inline-block; }
+.header .btn { padding: 0.65rem 1.25rem; font-size: 0.85rem; }
 @media (min-width: 768px) {
   .header .btn { padding: 0.75rem 1.5rem; font-size: 0.9rem; }
   .logo { font-size: 1.75rem; }
 }
 
-/* ============================================
-   HERO
-   ============================================ */
 .hero {
   position: relative;
   padding-top: 6rem;
@@ -226,7 +163,6 @@ h1, h2, h3, h4 {
   background: linear-gradient(180deg, var(--color-beige-soft) 0%, #ffffff 100%);
   overflow: hidden;
 }
-/* Decorative organic blob */
 .hero::before {
   content: '';
   position: absolute;
@@ -260,21 +196,6 @@ h1, h2, h3, h4 {
   align-items: center;
   text-align: center;
 }
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: white;
-  padding: 0.5rem 1rem;
-  border-radius: var(--r-full);
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: var(--color-sage-deep);
-  border: 1px solid var(--color-beige);
-  box-shadow: var(--shadow-sm);
-  opacity: 0;
-  animation: fadeUp 0.6s var(--ease-soft) 0.1s forwards;
-}
 .hero h1 {
   font-size: clamp(2.2rem, 7vw, 4rem);
   font-weight: 600;
@@ -283,10 +204,7 @@ h1, h2, h3, h4 {
   opacity: 0;
   animation: fadeUp 0.7s var(--ease-soft) 0.2s forwards;
 }
-.hero h1 .accent {
-  color: var(--color-sage-dark);
-  font-style: italic;
-}
+.hero h1 .accent { color: var(--color-sage-dark); font-style: italic; }
 .hero-sub {
   font-size: clamp(1rem, 3vw, 1.15rem);
   color: var(--color-text-muted);
@@ -315,14 +233,8 @@ h1, h2, h3, h4 {
   opacity: 0;
   animation: fadeUp 0.7s var(--ease-soft) 0.5s forwards;
 }
-.hero-trust-item {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-.hero-stars { color: #d4a456; letter-spacing: 0.05em; }
+.hero-trust-item { display: flex; align-items: center; gap: 0.35rem; }
 
-/* Hero image / product */
 .hero-visual {
   position: relative;
   width: 100%;
@@ -340,7 +252,6 @@ h1, h2, h3, h4 {
   background: linear-gradient(135deg, var(--color-beige-light) 0%, var(--color-beige) 100%);
   box-shadow: var(--shadow-lg);
 }
-
 .hero-floating-tag {
   position: absolute;
   background: white;
@@ -357,15 +268,9 @@ h1, h2, h3, h4 {
 .tag-1 { top: 8%; inset-inline-start: -10px; }
 .tag-2 { bottom: 12%; inset-inline-end: -10px; animation-delay: 2s; }
 
-/* Desktop layout */
 @media (min-width: 900px) {
   .hero { padding-top: 9rem; padding-bottom: 5rem; }
-  .hero-grid {
-    flex-direction: row-reverse;
-    text-align: center;
-    gap: 3rem;
-    align-items: center;
-  }
+  .hero-grid { flex-direction: row-reverse; text-align: center; gap: 3rem; align-items: center; }
   .hero-content { flex: 1; }
   .hero-visual { flex: 1; max-width: 500px; }
   .hero-cta-group { flex-direction: column; align-items: stretch; width: 100%; max-width: 380px; margin: 0 auto; }
@@ -374,104 +279,30 @@ h1, h2, h3, h4 {
   .tag-2 { inset-inline-end: -30px; }
 }
 
-/* ============================================
-   PROBLEM → SOLUTION
-   ============================================ */
-.problem-solution {
-  background: var(--color-beige-soft);
-}
-.ps-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 2.5rem;
-}
+.problem-solution { background: var(--color-beige-soft); }
+.ps-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2.5rem; }
 @media (min-width: 768px) {
-  .ps-grid {
-    grid-template-columns: 1fr auto 1fr;
-    gap: 2rem;
-    align-items: stretch;
-  }
+  .ps-grid { grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: stretch; }
 }
-.ps-card {
-  background: white;
-  padding: 2rem 1.5rem;
-  border-radius: var(--r-md);
-  box-shadow: var(--shadow-sm);
-}
+.ps-card { background: white; padding: 2rem 1.5rem; border-radius: var(--r-md); box-shadow: var(--shadow-sm); }
 .ps-card.problem { border-inline-start: 3px solid #d4a456; }
 .ps-card.solution { border-inline-start: 3px solid var(--color-sage); }
-.ps-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-.ps-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.ps-list li {
-  display: flex;
-  gap: 0.6rem;
-  align-items: flex-start;
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
-}
-.ps-list li::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  background: currentColor;
-  border-radius: 50%;
-  margin-top: 0.6rem;
-  flex-shrink: 0;
-}
-.ps-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color: var(--color-sage);
-  transform: rotate(90deg);
-}
+.ps-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+.ps-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+.ps-list li { display: flex; gap: 0.6rem; align-items: flex-start; color: var(--color-text-muted); font-size: 0.95rem; }
+.ps-list li::before { content: ''; width: 6px; height: 6px; background: currentColor; border-radius: 50%; margin-top: 0.6rem; flex-shrink: 0; }
+.ps-arrow { display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--color-sage); transform: rotate(90deg); }
 @media (min-width: 768px) {
   .ps-arrow { transform: none; }
   html[dir="rtl"] .ps-arrow { transform: scaleX(-1); }
 }
 
-/* ============================================
-   SECTION HEADER
-   ============================================ */
-.section-header {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-.section-header h2 {
-  font-size: clamp(1.8rem, 5vw, 2.75rem);
-  margin-bottom: 0.75rem;
-}
-.section-header p {
-  color: var(--color-text-muted);
-  font-size: 1.05rem;
-}
+.section-header { text-align: center; max-width: 600px; margin: 0 auto; }
+.section-header h2 { font-size: clamp(1.8rem, 5vw, 2.75rem); margin-bottom: 0.75rem; }
+.section-header p { color: var(--color-text-muted); font-size: 1.05rem; }
 
-/* ============================================
-   BENEFITS CARDS
-   ============================================ */
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
-  margin-top: 2.5rem;
-}
-@media (min-width: 768px) {
-  .benefits-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
-  }
-}
+.benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-top: 2.5rem; }
+@media (min-width: 768px) { .benefits-grid { grid-template-columns: repeat(4, 1fr); gap: 1.25rem; } }
 .benefit-card {
   background: white;
   padding: 1.5rem 1rem;
@@ -480,89 +311,19 @@ h1, h2, h3, h4 {
   border: 1px solid var(--color-beige);
   transition: all 0.3s var(--ease-soft);
 }
-.benefit-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--color-sage);
-}
-.benefit-icon {
-  width: 56px; height: 56px;
-  background: var(--color-beige-light);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem;
-  font-size: 1.5rem;
-}
-.benefit-card h3 {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-}
-.benefit-card p {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-  line-height: 1.5;
-}
+.benefit-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--color-sage); }
+.benefit-card h3 { font-family: var(--font-body); font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+.benefit-card p { font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; }
 
-/* ============================================
-   INGREDIENTS
-   ============================================ */
-.ingredients {
-  background: var(--color-beige-soft);
-}
-.ingredients-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 2.5rem;
-}
-@media (min-width: 768px) {
-  .ingredients-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
-}
-.ingredient {
-  display: flex;
-  gap: 1rem;
-  background: white;
-  padding: 1.25rem;
-  border-radius: var(--r-md);
-  align-items: flex-start;
-}
-.ingredient-badge {
-  flex-shrink: 0;
-  width: 52px; height: 52px;
-  background: var(--color-sage);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-}
-.ingredient h3 {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
-}
-.ingredient p {
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  line-height: 1.5;
-}
+.ingredients { background: var(--color-beige-soft); }
+.ingredients-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2.5rem; }
+@media (min-width: 768px) { .ingredients-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; } }
+.ingredient { display: flex; gap: 1rem; background: white; padding: 1.25rem; border-radius: var(--r-md); align-items: flex-start; }
+.ingredient h3 { font-family: var(--font-body); font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; }
+.ingredient p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; }
 
-/* ============================================
-   BEFORE / AFTER SLIDER
-   ============================================ */
-.before-after {
-  background: white;
-}
-.ba-wrapper {
-  max-width: 500px;
-  margin: 2.5rem auto 0;
-}
+.before-after { background: white; }
+.ba-wrapper { max-width: 500px; margin: 2.5rem auto 0; }
 .ba-slider {
   position: relative;
   width: 100%;
@@ -583,18 +344,9 @@ h1, h2, h3, h4 {
   color: white;
   text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
-.ba-before {
-  background-size: cover;
-  background-position: center;
-}
-.ba-after {
-  background-size: cover;
-  background-position: center;
-  clip-path: inset(0 0 0 50%);
-}
-html[dir="rtl"] .ba-after {
-  clip-path: inset(0 50% 0 0);
-}
+.ba-before { background-size: cover; background-position: center; }
+.ba-after { background-size: cover; background-position: center; clip-path: inset(0 0 0 50%); }
+html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
 .ba-label {
   position: absolute;
   top: 1rem;
@@ -613,7 +365,7 @@ html[dir="rtl"] .ba-after {
   bottom: 0;
   width: 3px;
   background: white;
-  inset-inline-start: 50%;
+  left: 50%;
   transform: translateX(-50%);
   cursor: ew-resize;
   box-shadow: 0 0 12px rgba(0,0,0,0.3);
@@ -622,7 +374,7 @@ html[dir="rtl"] .ba-after {
   content: '⇔';
   position: absolute;
   top: 50%;
-  inset-inline-start: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 44px; height: 44px;
   background: white;
@@ -634,50 +386,15 @@ html[dir="rtl"] .ba-after {
   font-size: 1.1rem;
   box-shadow: var(--shadow-md);
 }
-.ba-caption {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-}
+.ba-caption { text-align: center; margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted); }
 
-/* ============================================
-   REVIEWS
-   ============================================ */
-.reviews {
-  background: var(--color-beige-soft);
-}
-.reviews-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 2.5rem;
-}
-@media (min-width: 768px) {
-  .reviews-grid { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-}
-.review-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: var(--r-md);
-  box-shadow: var(--shadow-sm);
-}
-.review-stars {
-  color: #d4a456;
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.1em;
-}
-.review-text {
-  font-size: 0.95rem;
-  color: var(--color-text);
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-.review-author {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
+.reviews { background: var(--color-beige-soft); }
+.reviews-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2.5rem; }
+@media (min-width: 768px) { .reviews-grid { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; } }
+.review-card { background: white; padding: 1.5rem; border-radius: var(--r-md); box-shadow: var(--shadow-sm); }
+.review-stars { color: #d4a456; margin-bottom: 0.75rem; letter-spacing: 0.1em; }
+.review-text { font-size: 0.95rem; color: var(--color-text); margin-bottom: 1rem; line-height: 1.6; }
+.review-author { display: flex; align-items: center; gap: 0.75rem; }
 .review-avatar {
   width: 40px; height: 40px;
   border-radius: 50%;
@@ -688,24 +405,10 @@ html[dir="rtl"] .ba-after {
   font-weight: 700;
   color: var(--color-sage-deep);
 }
-.review-name {
-  font-weight: 700;
-  font-size: 0.9rem;
-}
-.review-meta {
-  font-size: 0.75rem;
-  color: var(--color-text-light);
-}
+.review-name { font-weight: 700; font-size: 0.9rem; }
+.review-meta { font-size: 0.75rem; color: var(--color-text-light); }
 
-/* ============================================
-   URGENCY SECTION
-   ============================================ */
-.urgency {
-  background: var(--color-sage-deep);
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
+.urgency { background: var(--color-sage-deep); color: white; position: relative; overflow: hidden; }
 .urgency::before {
   content: '';
   position: absolute;
@@ -715,76 +418,20 @@ html[dir="rtl"] .ba-after {
   width: 600px; height: 600px;
   background: radial-gradient(circle, rgba(230, 214, 192, 0.1) 0%, transparent 70%);
 }
-.urgency-content {
-  position: relative;
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
+.urgency-content { position: relative; text-align: center; max-width: 600px; margin: 0 auto; }
 .urgency .eyebrow { color: var(--color-beige); }
-.urgency h2 {
-  font-size: clamp(1.8rem, 5vw, 2.75rem);
-  margin-bottom: 1rem;
-  color: white;
-}
-.urgency h2 .highlight {
-  color: var(--color-beige);
-  font-style: italic;
-}
-.urgency-counter {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1.5rem 0 2rem;
-}
-.counter-box {
-  background: rgba(255,255,255,0.1);
-  padding: 0.75rem 1rem;
-  border-radius: var(--r-sm);
-  min-width: 70px;
-  backdrop-filter: blur(10px);
-}
-.counter-num {
-  font-family: var(--font-display);
-  font-size: 1.75rem;
-  font-weight: 700;
-  display: block;
-  line-height: 1;
-}
-.counter-label {
-  font-size: 0.7rem;
-  opacity: 0.7;
-  margin-top: 0.25rem;
-}
-.urgency .btn-primary {
-  background: var(--color-beige);
-  color: var(--color-sage-deep);
-}
-.urgency .btn-primary:hover {
-  background: white;
-}
-.urgency-stock {
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  opacity: 0.8;
-}
+.urgency h2 { font-size: clamp(1.8rem, 5vw, 2.75rem); margin-bottom: 1rem; color: white; }
+.urgency h2 .highlight { color: var(--color-beige); font-style: italic; }
+.urgency-counter { display: flex; justify-content: center; gap: 0.5rem; margin: 1.5rem 0 2rem; }
+.counter-box { background: rgba(255,255,255,0.1); padding: 0.75rem 1rem; border-radius: var(--r-sm); min-width: 70px; backdrop-filter: blur(10px); }
+.counter-num { font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; display: block; line-height: 1; }
+.counter-label { font-size: 0.7rem; opacity: 0.7; margin-top: 0.25rem; }
+.urgency .btn-primary { background: var(--color-beige); color: var(--color-sage-deep); }
+.urgency .btn-primary:hover { background: white; }
+.urgency-stock { margin-top: 1rem; font-size: 0.85rem; opacity: 0.8; }
 
-/* ============================================
-   FAQ
-   ============================================ */
-.faq-list {
-  max-width: 700px;
-  margin: 2.5rem auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.faq-item {
-  background: var(--color-beige-soft);
-  border-radius: var(--r-md);
-  overflow: hidden;
-  transition: background 0.3s var(--ease-soft);
-}
+.faq-list { max-width: 700px; margin: 2.5rem auto 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.faq-item { background: var(--color-beige-soft); border-radius: var(--r-md); overflow: hidden; transition: background 0.3s var(--ease-soft); }
 .faq-item[open] { background: white; box-shadow: var(--shadow-sm); }
 .faq-question {
   width: 100%;
@@ -814,57 +461,17 @@ html[dir="rtl"] .ba-after {
   font-size: 0.75rem;
   transition: all 0.3s var(--ease-soft);
 }
+.faq-answer { padding: 0 1.5rem 1.25rem; color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.7; }
 
-.faq-answer {
-  padding: 0 1.5rem 1.25rem;
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-.footer {
-  background: var(--color-beige-soft);
-  padding: 2.5rem 0 6rem; /* extra bottom for mobile sticky CTA */
-  text-align: center;
-}
-@media (min-width: 768px) {
-  .footer { padding: 3rem 0 3rem; }
-}
-.footer-logo {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-sage-deep);
-  margin-bottom: 0.5rem;
-}
-.footer p {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-  margin-bottom: 1rem;
-}
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  font-size: 0.85rem;
-  margin-bottom: 1.5rem;
-}
-.footer-links a {
-  color: var(--color-text-muted);
-  transition: color 0.2s;
-}
+.footer { background: var(--color-beige-soft); padding: 2.5rem 0 6rem; text-align: center; }
+@media (min-width: 768px) { .footer { padding: 3rem 0 3rem; } }
+.footer-logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--color-sage-deep); margin-bottom: 0.5rem; }
+.footer p { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem; }
+.footer-links { display: flex; justify-content: center; gap: 1.5rem; font-size: 0.85rem; margin-bottom: 1.5rem; }
+.footer-links a { color: var(--color-text-muted); transition: color 0.2s; }
 .footer-links a:hover { color: var(--color-sage-deep); }
-.footer-copy {
-  font-size: 0.75rem;
-  color: var(--color-text-light);
-}
+.footer-copy { font-size: 0.75rem; color: var(--color-text-light); }
 
-/* ============================================
-   STICKY MOBILE CTA
-   ============================================ */
 .sticky-cta {
   position: fixed;
   bottom: 0;
@@ -878,17 +485,9 @@ html[dir="rtl"] .ba-after {
   transition: transform 0.4s var(--ease-soft);
 }
 .sticky-cta.visible { transform: translateY(0); }
-.sticky-cta .btn {
-  width: 100%;
-  padding: 1rem;
-}
-@media (min-width: 900px) {
-  .sticky-cta { display: none; }
-}
+.sticky-cta .btn { width: 100%; padding: 1rem; }
+@media (min-width: 900px) { .sticky-cta { display: none; } }
 
-/* ============================================
-   EXIT INTENT POPUP
-   ============================================ */
 .popup-overlay {
   position: fixed;
   inset: 0;
@@ -903,10 +502,7 @@ html[dir="rtl"] .ba-after {
   pointer-events: none;
   transition: opacity 0.3s var(--ease-soft);
 }
-.popup-overlay.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
+.popup-overlay.visible { opacity: 1; pointer-events: auto; }
 .popup {
   background: white;
   border-radius: var(--r-lg);
@@ -944,20 +540,9 @@ html[dir="rtl"] .ba-after {
   letter-spacing: 0.05em;
   margin-bottom: 1rem;
 }
-.popup h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-.popup p {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-  margin-bottom: 1.25rem;
-}
-.popup-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
+.popup h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.popup p { color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.25rem; }
+.popup-form { display: flex; flex-direction: column; gap: 0.5rem; }
 .popup-input {
   width: 100%;
   padding: 0.95rem 1.25rem;
@@ -969,40 +554,17 @@ html[dir="rtl"] .ba-after {
   background: var(--color-beige-soft);
   transition: border-color 0.2s;
 }
-.popup-input:focus {
-  outline: none;
-  border-color: var(--color-sage);
-  background: white;
-}
-.popup-note {
-  font-size: 0.75rem;
-  color: var(--color-text-light);
-  margin-top: 0.5rem;
-}
-.popup-success {
-  display: none;
-  color: var(--color-sage-deep);
-  font-weight: 700;
-}
+.popup-input:focus { outline: none; border-color: var(--color-sage); background: white; }
+.popup-note { font-size: 0.75rem; color: var(--color-text-light); margin-top: 0.5rem; }
+.popup-success { display: none; color: var(--color-sage-deep); font-weight: 700; }
 .popup.success .popup-form,
 .popup.success .popup-badge,
 .popup.success p:not(.popup-success) { display: none; }
 .popup.success .popup-success { display: block; }
 
-/* ============================================
-   SCROLL ANIMATIONS
-   ============================================ */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s var(--ease-soft), transform 0.7s var(--ease-soft);
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s var(--ease-soft), transform 0.7s var(--ease-soft); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* Keyframes */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -1015,24 +577,15 @@ html[dir="rtl"] .ba-after {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
-
-/* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 </style>
 </head>
 <body>
 
-<!-- ============================================
-     HEADER — لوقو يمين + CTA يسار
-     ============================================ -->
 <header class="header">
   <div class="container header-inner">
-‎    <!-- في RTL، أول عنصر يطلع يمين -->
     <a href="#" class="logo">
       <span class="logo-dot"></span>
       Velora Skin
@@ -1041,21 +594,11 @@ html[dir="rtl"] .ba-after {
   </div>
 </header>
 
-<!-- ============================================
-     HERO
-     ============================================ -->
 <section class="hero">
   <div class="container hero-grid">
-
     <div class="hero-content">
-      <!-- A/B TEST: العنوان يتبدل تلقائياً (شوفي الـ JS تحت) -->
-      <h1 id="hero-headline">
-‎        بشرة صافية <span class="accent">خلال ٣٠ يوم</span>
-      </h1>
-
-      <p class="hero-sub">
-‎        سيروم متخصص يحارب الحبوب وآثارها بمكونات طبيعية مدروسة علميًا
-      </p>
+      <h1 id="hero-headline">بشرة صافية <span class="accent">خلال ٣٠ يوم</span></h1>
+      <p class="hero-sub">سيروم متخصص يحارب الحبوب وآثارها بمكونات طبيعية مدروسة علميًا</p>
 
       <div class="hero-pricing" style="margin-bottom: 0.5rem; opacity: 0; animation: fadeUp 0.7s var(--ease-soft) 0.35s forwards;">
         <span style="text-decoration: line-through; color: var(--color-text-light); font-size: 1.1rem;">١٤٩ ريال</span>
@@ -1063,44 +606,27 @@ html[dir="rtl"] .ba-after {
       </div>
 
       <div class="hero-cta-group">
-        <a href="#order" class="btn btn-primary btn-large" data-cta="hero-primary">
-‎          اطلبيه الآن
-        </a>
-        <a href="#how-it-works" class="btn btn-secondary btn-large" data-cta="hero-secondary">
-‎          كيفية عمله
-        </a>
+        <a href="#order" class="btn btn-primary btn-large" data-cta="hero-primary">اطلبيه الآن</a>
+        <a href="#how-it-works" class="btn btn-secondary btn-large" data-cta="hero-secondary">كيفية عمله</a>
       </div>
 
       <div class="hero-trust" style="margin-top: 1.5rem;">
-        <div class="hero-trust-item">
-          <span>دفع عند الاستلام</span>
-        </div>
-        <div class="hero-trust-item">
-          <span>شحن مجاني</span>
-        </div>
-        <div class="hero-trust-item">
-          <span>استرجاع خلال ٧ أيام</span>
-        </div>
+        <div class="hero-trust-item"><span>دفع عند الاستلام</span></div>
+        <div class="hero-trust-item"><span>شحن مجاني</span></div>
+        <div class="hero-trust-item"><span>استرجاع خلال ٧ أيام</span></div>
       </div>
     </div>
 
     <div class="hero-visual">
       <div class="hero-visual-frame">
-       <img src="https://res.cloudinary.com/drgayxcxr/image/upload/q_auto/f_auto/v1781303143/VeloraSkin_Serum_qkclt6.png" alt="Velora Skin Serum">      </div>
-      <div class="hero-floating-tag tag-1">
-‎        نتائج خلال ٧ أيام
+        <img src="https://res.cloudinary.com/drgayxcxr/image/upload/q_auto/f_auto/v1781303143/VeloraSkin_Serum_qkclt6.png" alt="Velora Skin Serum">
       </div>
-      <div class="hero-floating-tag tag-2">
-‎        مكونات طبيعية ١٠٠٪
-      </div>
+      <div class="hero-floating-tag tag-1">نتائج خلال ٧ أيام</div>
+      <div class="hero-floating-tag tag-2">مكونات طبيعية ١٠٠٪</div>
     </div>
-
   </div>
 </section>
 
-<!-- ============================================
-     PROBLEM → SOLUTION
-     ============================================ -->
 <section class="section problem-solution" id="how-it-works">
   <div class="container">
     <div class="section-header reveal">
@@ -1108,7 +634,6 @@ html[dir="rtl"] .ba-after {
       <h2>نعرف إيش تعانين منه</h2>
       <p>الحبوب مو بس مشكلة جلدية، تأثر على ثقتك بنفسك ومزاجك اليومي</p>
     </div>
-
     <div class="ps-grid">
       <div class="ps-card problem reveal">
         <h3>المشكلة</h3>
@@ -1119,9 +644,7 @@ html[dir="rtl"] .ba-after {
           <li>إحساس بفقدان الثقة عند الخروج بدون مكياج</li>
         </ul>
       </div>
-
       <div class="ps-arrow reveal">→</div>
-
       <div class="ps-card solution reveal">
         <h3>الحل: Velora Skin</h3>
         <ul class="ps-list">
@@ -1135,16 +658,12 @@ html[dir="rtl"] .ba-after {
   </div>
 </section>
 
-<!-- ============================================
-     BENEFITS CARDS
-     ============================================ -->
 <section class="section">
   <div class="container">
     <div class="section-header reveal">
       <span class="eyebrow">المميزات</span>
       <h2 style="color: var(--color-sage-dark);">كل اللي تحتاجينه في زجاجة واحدة</h2>
     </div>
-
     <div class="benefits-grid">
       <div class="benefit-card reveal">
         <h3>يقلل الحبوب</h3>
@@ -1166,9 +685,6 @@ html[dir="rtl"] .ba-after {
   </div>
 </section>
 
-<!-- ============================================
-     INGREDIENTS
-     ============================================ -->
 <section class="section ingredients">
   <div class="container">
     <div class="section-header reveal">
@@ -1176,7 +692,6 @@ html[dir="rtl"] .ba-after {
       <h2>تركيبة مدروسة بعناية</h2>
       <p>كل مكون مختار بعناية للحصول على أفضل نتيجة لبشرتك</p>
     </div>
-
     <div class="ingredients-grid">
       <div class="ingredient reveal">
         <div>
@@ -1206,9 +721,6 @@ html[dir="rtl"] .ba-after {
   </div>
 </section>
 
-<!-- ============================================
-     BEFORE / AFTER SLIDER
-     ============================================ -->
 <section class="section before-after">
   <div class="container">
     <div class="section-header reveal">
@@ -1216,12 +728,13 @@ html[dir="rtl"] .ba-after {
       <h2>الفرق واضح بعد ٣٠ يوم</h2>
       <p>اسحبي الدائرة لمشاهدة الفرق</p>
     </div>
-
     <div class="ba-wrapper reveal">
       <div class="ba-slider" id="baSlider">
-        <div class="ba-before" style="background-image: url('https://res.cloudinary.com/drgayxcxr/image/upload/q_auto/f_auto/v1781302976/Before-VeloraSkin_zonq8g.png');">       <div class="ba-label ba-label-before">قبل</div>
+        <div class="ba-before" style="background-image: url('https://res.cloudinary.com/drgayxcxr/image/upload/q_auto/f_auto/v1781302976/Before-VeloraSkin_zonq8g.png');">
+          <div class="ba-label ba-label-before">قبل</div>
         </div>
-        <div class="ba-after" id="baAfter" style="background-image: url('https://res.cloudinary.com/drgayxcxr/image/upload/q_auto/f_auto/v1781302775/After-VeloraSkin_huy2gn.png');">          <div class="ba-label ba-label-after">بعد ٣٠ يوم</div>
+        <div class="ba-after" id="baAfter" style="background-image: url('https://res.cloudinary.com/drgayxcxr/image/upload/q_auto/f_auto/v1781302775/After-VeloraSkin_huy2gn.png');">
+          <div class="ba-label ba-label-after">بعد ٣٠ يوم</div>
         </div>
         <div class="ba-handle" id="baHandle"></div>
       </div>
@@ -1230,16 +743,12 @@ html[dir="rtl"] .ba-after {
   </div>
 </section>
 
-<!-- ============================================
-     REVIEWS
-     ============================================ -->
 <section class="section reviews">
   <div class="container">
     <div class="section-header reveal">
       <span class="eyebrow">آراء عميلاتنا</span>
       <h2>+٢٣٠٠ تجربة ناجحة</h2>
     </div>
-
     <div class="reviews-grid">
       <div class="review-card reveal">
         <div class="review-stars">★★★★★</div>
@@ -1252,7 +761,6 @@ html[dir="rtl"] .ba-after {
           </div>
         </div>
       </div>
-
       <div class="review-card reveal">
         <div class="review-stars">★★★★★</div>
         <p class="review-text">"بشرتي تغيرت تماماً، الآثار اللي كانت معاي من سنوات بدأت تختفي. الحين أطلع بدون مكياج وأنا واثقة."</p>
@@ -1264,7 +772,6 @@ html[dir="rtl"] .ba-after {
           </div>
         </div>
       </div>
-
       <div class="review-card reveal">
         <div class="review-stars">★★★★★</div>
         <p class="review-text">"بشرتي حساسة جداً وكل شي يهيجها، بس هذا السيروم ناعم وما سبب لي أي تحسس. تجربة ممتازة."</p>
@@ -1280,21 +787,12 @@ html[dir="rtl"] .ba-after {
   </div>
 </section>
 
-<!-- ============================================
-     URGENCY
-     ============================================ -->
 <section class="section urgency" id="order">
   <div class="container">
     <div class="urgency-content reveal">
       <span class="eyebrow">عرض محدود</span>
-      <h2>
-‎        خصم <span class="highlight">٢٠٪</span><br>
-‎        لأول ١٠٠ طلب فقط
-      </h2>
-      <p style="opacity: 0.8; max-width: 480px; margin: 0 auto;">
-‎        استفيدي من العرض قبل ما يخلص. شحن مجاني + هدية مع كل طلب.
-      </p>
-
+      <h2>خصم <span class="highlight">٢٠٪</span><br>لأول ١٠٠ طلب فقط</h2>
+      <p style="opacity: 0.8; max-width: 480px; margin: 0 auto;">استفيدي من العرض قبل ما يخلص. شحن مجاني + هدية مع كل طلب.</p>
       <div class="urgency-counter">
         <div class="counter-box">
           <span class="counter-num" id="hours">23</span>
@@ -1309,83 +807,44 @@ html[dir="rtl"] .ba-after {
           <div class="counter-label">ثانية</div>
         </div>
       </div>
-
       <p style="font-size: 1.15rem; font-weight: 600; color: var(--color-beige); margin-bottom: 1rem;">احصلي عليه الآن بـ ٩٩ ريال فقط!</p>
-      <a href="#" class="btn btn-primary btn-large" data-cta="urgency" onclick="trackPurchaseIntent(event)">
-‎        اطلبيه الآن
-      </a>
+      <a href="#" class="btn btn-primary btn-large" data-cta="urgency" onclick="trackPurchaseIntent(event)">اطلبيه الآن</a>
       <div class="urgency-stock">متبقى ٤٣ قطعة فقط من أصل ١٠٠</div>
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     FAQ
-     ============================================ -->
 <section class="section">
   <div class="container">
     <div class="section-header reveal">
       <span class="eyebrow">الأسئلة الشائعة</span>
       <h2 style="color: var(--color-sage-dark);">أسئلة قد تخطر ببالك</h2>
     </div>
-
     <div class="faq-list">
       <details class="faq-item reveal">
-        <summary class="faq-question">
-‎          متى راح أشوف نتائج؟
-          <span class="faq-icon">▼</span>
-        </summary>
-        <div class="faq-answer">
-‎          أغلب العميلات يلاحظن فرق خلال ٧-١٤ يوم. النتائج الكاملة تظهر بعد ٣٠ يوم من الاستخدام المنتظم مرتين يومياً.
-        </div>
+        <summary class="faq-question">متى راح أشوف نتائج؟<span class="faq-icon">▼</span></summary>
+        <div class="faq-answer">أغلب العميلات يلاحظن فرق خلال ٧-١٤ يوم. النتائج الكاملة تظهر بعد ٣٠ يوم من الاستخدام المنتظم مرتين يومياً.</div>
       </details>
-
       <details class="faq-item reveal">
-        <summary class="faq-question">
-‎          هل مناسب للبشرة الحساسة؟
-          <span class="faq-icon">▼</span>
-        </summary>
-        <div class="faq-answer">
-‎          نعم، تركيبتنا خالية من البارابين والكحول والعطور المهيّجة، ومُختبرة من قبل أطباء جلدية للبشرة الحساسة.
-        </div>
+        <summary class="faq-question">هل مناسب للبشرة الحساسة؟<span class="faq-icon">▼</span></summary>
+        <div class="faq-answer">نعم، تركيبتنا خالية من البارابين والكحول والعطور المهيّجة، ومُختبرة من قبل أطباء جلدية للبشرة الحساسة.</div>
       </details>
-
       <details class="faq-item reveal">
-        <summary class="faq-question">
-‎          كيف أستخدمه بشكل صحيح؟
-          <span class="faq-icon">▼</span>
-        </summary>
-        <div class="faq-answer">
-‎          بعد غسل الوجه، ضعي ٣-٤ قطرات على بشرة نظيفة وجافة صباحاً ومساءً، ثم اتبعيها بمرطبك المعتاد. تذكري واقي الشمس صباحاً.
-        </div>
+        <summary class="faq-question">كيف أستخدمه بشكل صحيح؟<span class="faq-icon">▼</span></summary>
+        <div class="faq-answer">بعد غسل الوجه، ضعي ٣-٤ قطرات على بشرة نظيفة وجافة صباحاً ومساءً، ثم اتبعيها بمرطبك المعتاد. تذكري واقي الشمس صباحاً.</div>
       </details>
-
       <details class="faq-item reveal">
-        <summary class="faq-question">
-‎          هل آمن للحامل والمرضع؟
-          <span class="faq-icon">▼</span>
-        </summary>
-        <div class="faq-answer">
-‎          ننصح باستشارة طبيبك قبل الاستخدام في فترة الحمل والرضاعة، لأن بعض المكونات قد تحتاج موافقة طبية.
-        </div>
+        <summary class="faq-question">هل آمن للحامل والمرضع؟<span class="faq-icon">▼</span></summary>
+        <div class="faq-answer">ننصح باستشارة طبيبك قبل الاستخدام في فترة الحمل والرضاعة، لأن بعض المكونات قد تحتاج موافقة طبية.</div>
       </details>
-
       <details class="faq-item reveal">
-        <summary class="faq-question">
-‎          متى يوصلني الطلب؟
-          <span class="faq-icon">▼</span>
-        </summary>
-        <div class="faq-answer">
-‎          التوصيل خلال ٢-٤ أيام عمل داخل السعودية، و٥-٧ أيام لباقي دول الخليج. الشحن مجاني للطلبات فوق ٢٠٠ ريال.
-        </div>
+        <summary class="faq-question">متى يوصلني الطلب؟<span class="faq-icon">▼</span></summary>
+        <div class="faq-answer">التوصيل خلال ٢-٤ أيام عمل داخل السعودية، و٥-٧ أيام لباقي دول الخليج. الشحن مجاني للطلبات فوق ٢٠٠ ريال.</div>
       </details>
     </div>
   </div>
 </section>
 
-<!-- ============================================
-     FOOTER
-     ============================================ -->
 <footer class="footer">
   <div class="container">
     <div class="footer-logo">
@@ -1402,18 +861,10 @@ html[dir="rtl"] .ba-after {
   </div>
 </footer>
 
-<!-- ============================================
-     STICKY MOBILE CTA
-     ============================================ -->
 <div class="sticky-cta" id="stickyCta">
-  <a href="#order" class="btn btn-primary" data-cta="sticky">
-‎    اطلبيه الآن
-  </a>
+  <a href="#order" class="btn btn-primary" data-cta="sticky">اطلبيه الآن</a>
 </div>
 
-<!-- ============================================
-     EXIT INTENT POPUP
-     ============================================ -->
 <div class="popup-overlay" id="popup">
   <div class="popup" id="popupBox">
     <button class="popup-close" id="popupClose" aria-label="إغلاق">×</button>
@@ -1429,19 +880,11 @@ html[dir="rtl"] .ba-after {
   </div>
 </div>
 
-<!-- ============================================
-     JAVASCRIPT
-     ============================================ -->
 <script>
-/* ===========================================
-   1. A/B TEST — عنوان الهيرو
-   =========================================== */
 const headlineVariants = [
   { html: 'بشرة صافية <span class="accent">خلال ٣٠ يوم</span>', label: 'A' },
   { html: 'وداعًا للحبوب <span class="accent">وآثارها للأبد</span>', label: 'B' }
 ];
-
-‎// خزني الـ variant عشان نفس الزائر يشوف نفس العنوان
 let variant = localStorage.getItem('velora_ab_variant');
 if (variant === null) {
   variant = Math.random() < 0.5 ? '0' : '1';
@@ -1449,13 +892,8 @@ if (variant === null) {
 }
 const selected = headlineVariants[parseInt(variant)];
 document.getElementById('hero-headline').innerHTML = selected.html;
-
-‎// تتبّع أي variant تم عرضه (يتربط بالـ pixels)
 window.veloraVariant = selected.label;
 
-/* ===========================================
-   2. SCROLL REVEAL ANIMATIONS
-   =========================================== */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -1464,189 +902,111 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-/* ===========================================
-   3. STICKY MOBILE CTA — يظهر بعد سكرول 60%
-   =========================================== */
 const stickyCta = document.getElementById('stickyCta');
 window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY;
   const heroHeight = document.querySelector('.hero').offsetHeight;
-  if (scrolled > heroHeight * 0.6) {
-    stickyCta.classList.add('visible');
-  } else {
-    stickyCta.classList.remove('visible');
-  }
+  stickyCta.classList.toggle('visible', window.scrollY > heroHeight * 0.6);
 }, { passive: true });
 
-/* ===========================================
-   4. BEFORE/AFTER SLIDER (يدعم اللمس)
-   =========================================== */
 (function() {
   const slider = document.getElementById('baSlider');
   const handle = document.getElementById('baHandle');
   const after = document.getElementById('baAfter');
   let isDragging = false;
-
   function move(clientX) {
     const rect = slider.getBoundingClientRect();
-    let percent = ((clientX - rect.left) / rect.width) * 100;
-    percent = Math.max(0, Math.min(100, percent));
-    handle.style.insetInlineStart = percent + '%';
-    // RTL: clip-path يحتاج يعكس
+    let percent = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+    handle.style.left = percent + '%';
     const isRtl = document.documentElement.dir === 'rtl';
-    if (isRtl) {
-      after.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
-    } else {
-      after.style.clipPath = `inset(0 0 0 ${percent}%)`;
-    }
+    after.style.clipPath = isRtl ? `inset(0 ${100 - percent}% 0 0)` : `inset(0 0 0 ${percent}%)`;
   }
-
   slider.addEventListener('mousedown', (e) => { isDragging = true; move(e.clientX); });
   document.addEventListener('mousemove', (e) => { if (isDragging) move(e.clientX); });
   document.addEventListener('mouseup', () => { isDragging = false; });
-
   slider.addEventListener('touchstart', (e) => { isDragging = true; move(e.touches[0].clientX); }, { passive: true });
   document.addEventListener('touchmove', (e) => { if (isDragging) move(e.touches[0].clientX); }, { passive: true });
   document.addEventListener('touchend', () => { isDragging = false; });
 })();
 
-/* ===========================================
-   5. COUNTDOWN TIMER
-   =========================================== */
 (function() {
-‎  // عداد يبدأ من ٢٤ ساعة ويستمر تنازلياً
   let endTime = localStorage.getItem('velora_countdown_end');
   if (!endTime) {
-    endTime = Date.now() + (24 * 60 * 60 * 1000);
+    endTime = Date.now() + 86400000;
     localStorage.setItem('velora_countdown_end', endTime);
   }
   endTime = parseInt(endTime);
-
   function update() {
     const diff = endTime - Date.now();
     if (diff <= 0) {
-‎      // أعد ضبط العداد لـ ٢٤ ساعة جديدة
-      endTime = Date.now() + (24 * 60 * 60 * 1000);
+      endTime = Date.now() + 86400000;
       localStorage.setItem('velora_countdown_end', endTime);
       return;
     }
-    const h = Math.floor(diff / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
-    document.getElementById('hours').textContent = String(h).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(m).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(s).padStart(2, '0');
+    document.getElementById('hours').textContent = String(Math.floor(diff / 3600000)).padStart(2, '0');
+    document.getElementById('minutes').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+    document.getElementById('seconds').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
   }
   update();
   setInterval(update, 1000);
 })();
 
-/* ===========================================
-   6. EXIT INTENT POPUP
-   =========================================== */
 (function() {
   const popup = document.getElementById('popup');
   const closeBtn = document.getElementById('popupClose');
   const form = document.getElementById('popupForm');
   const box = document.getElementById('popupBox');
-
   let shown = sessionStorage.getItem('velora_popup_shown');
   let pageLoadTime = Date.now();
 
   function show() {
-    if (shown) return;
-‎    // لا يظهر إلا بعد ١٥ ثانية على الصفحة
-    if (Date.now() - pageLoadTime < 15000) return;
+    if (shown || Date.now() - pageLoadTime < 15000) return;
     popup.classList.add('visible');
     sessionStorage.setItem('velora_popup_shown', '1');
     shown = '1';
-‎    // تتبّع
     if (window.fbq) fbq('track', 'ViewContent', { content_name: 'Exit Popup' });
     if (window.ttq) ttq.track('ViewContent', { content_id: 'exit_popup' });
   }
+  function hide() { popup.classList.remove('visible'); }
 
-  function hide() {
-    popup.classList.remove('visible');
-  }
-
-  // Desktop: عند خروج الماوس من أعلى الصفحة
-  document.addEventListener('mouseout', (e) => {
-    if (e.clientY <= 0 && !e.relatedTarget) show();
-  });
-
-  // Mobile: عند الـ scroll السريع للأعلى (بدل exit intent)
-  let lastScrollY = window.scrollY;
-  let lastScrollTime = Date.now();
+  document.addEventListener('mouseout', (e) => { if (e.clientY <= 0 && !e.relatedTarget) show(); });
+  let lastScrollY = window.scrollY, lastScrollTime = Date.now();
   window.addEventListener('scroll', () => {
     const now = Date.now();
-    const diff = lastScrollY - window.scrollY;
-    const time = now - lastScrollTime;
-    if (diff > 200 && time < 300 && window.scrollY < 100) {
-      show();
-    }
+    if (lastScrollY - window.scrollY > 200 && now - lastScrollTime < 300 && window.scrollY < 100) show();
     lastScrollY = window.scrollY;
     lastScrollTime = now;
   }, { passive: true });
 
   closeBtn.addEventListener('click', hide);
   popup.addEventListener('click', (e) => { if (e.target === popup) hide(); });
-
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const email = document.getElementById('popupEmail').value;
-
-‎    // ⚠️ هنا تربطين Brevo / أي خدمة إيميل ماركتنق
     console.log('Email submitted:', email);
-‎    // مثال Brevo:
-    // fetch('/api/subscribe', { method: 'POST', body: JSON.stringify({email}) })
-
-‎    // تتبع
     if (window.fbq) fbq('track', 'Lead', { content_name: 'Email Signup' });
     if (window.ttq) ttq.track('SubmitForm', { content_id: 'exit_popup_email' });
-
     box.classList.add('success');
     setTimeout(hide, 2500);
   });
 })();
 
-/* ===========================================
-   7. CTA TRACKING
-   =========================================== */
 document.querySelectorAll('[data-cta]').forEach(btn => {
   btn.addEventListener('click', () => {
     const ctaName = btn.dataset.cta;
-    if (window.fbq) {
-      fbq('track', 'InitiateCheckout', {
-        content_name: ctaName,
-        ab_variant: window.veloraVariant
-      });
-    }
-    if (window.ttq) {
-      ttq.track('ClickButton', {
-        content_id: ctaName,
-        ab_variant: window.veloraVariant
-      });
-    }
+    if (window.fbq) fbq('track', 'InitiateCheckout', { content_name: ctaName, ab_variant: window.veloraVariant });
+    if (window.ttq) ttq.track('ClickButton', { content_id: ctaName, ab_variant: window.veloraVariant });
   });
 });
 
-function trackPurchaseIntent(e) {
-‎  // عند الضغط على CTA الـ urgency، اربطي مع صفحة الدفع
-  // e.preventDefault();
-  // window.location.href = '/checkout';
-}
+function trackPurchaseIntent(e) {}
 
-/* FAQ icon toggle */
 document.querySelectorAll('.faq-item').forEach(item => {
   item.addEventListener('toggle', () => {
-    const icon = item.querySelector('.faq-icon');
-    icon.textContent = item.open ? '−' : '▼';
+    item.querySelector('.faq-icon').textContent = item.open ? '−' : '▼';
   });
 });
 </script>
-
 </body>
 </html>
