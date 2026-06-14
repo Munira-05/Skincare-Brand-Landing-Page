@@ -95,6 +95,14 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   margin-bottom: var(--space-sm);
 }
+#portfolioPopupBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+#portfolioPopupBox .btn {
+  width: 100%;
+}
 #portfolioPopup {
   position: fixed;
   inset: 0;
@@ -116,9 +124,9 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.95rem 1.75rem;
+  padding: 0.9rem 1.4rem;
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   border-radius: var(--r-full);
   transition: all 0.3s var(--ease-soft);
@@ -135,7 +143,7 @@ h1, h2, h3, h4 {
   box-shadow: 0 8px 28px rgba(77, 85, 71, 0.25);
 }
 .btn-secondary {
-  background: transparent;
+  background: var(--color-beige-soft);
   color: var(--color-sage-deep);
   border: 1.5px solid var(--color-sage-dark);
 }
@@ -937,10 +945,9 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
     <button class="popup-close" id="portfolioPopupClose">×</button>
     <div class="popup-badge">تجربة توضيحية</div>
     <h3>هذا مجرد مشروع تجريبي</h3>
-    <p>هذا اللاندينق بيج من أعمالي في تصميم صفحات الهبوط  
-      تبين تشوفين كيف بنيته خطوة بخطوة؟</p>
-    <a href="PORTFOLIO.html" class="btn btn-primary btn-large">نعم، عرض البورتفوليو</a>
-    <button class="btn btn-secondary btn-large" id="stayHereBtn">لا، أكمّل التجربة</button>
+    <p>مشروع صفحة هبوط لبراند وهمي بهدف عرض مهاراتنا في تصميم وتجربة المستخدم</p>
+    <a href="PORTFOLIO.html" class="btn btn-primary btn-large">عرض البورتفوليو</a>
+    <button class="btn btn-secondary btn-large" id="stayHereBtn">إكمال التجربة</button>
   </div>
 </div>
 
