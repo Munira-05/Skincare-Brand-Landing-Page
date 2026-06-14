@@ -598,9 +598,7 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-content">
-      <h1 id="hero-headline">
         <h1 id="hero-headline">وداعًا للحبوب وآثارها <span class="accent">خلال ٣٠ يوم</span></h1>
-       </h1>
        <p class="hero-sub">يقلل الحبوب وآثارها لبشرة أنقى خلال أسابيع</p>
       <div class="hero-pricing" style="margin-bottom: 0.5rem; opacity: 0; animation: fadeUp 0.7s var(--ease-soft) 0.35s forwards;">
         <span style="text-decoration: line-through; color: var(--color-text-light); font-size: 1.1rem;">١٤٩ ريال</span>
@@ -881,18 +879,7 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
 </div>
 
 <script>
-const headlineVariants = [
-  { html: 'بشرة صافية <span class="accent">خلال ٣٠ يوم</span>', label: 'A' },
-  { html: 'وداعًا للحبوب <span class="accent">وآثارها للأبد</span>', label: 'B' }
-];
-let variant = localStorage.getItem('velora_ab_variant');
-if (variant === null) {
-  variant = Math.random() < 0.5 ? '0' : '1';
-  localStorage.setItem('velora_ab_variant', variant);
-}
-const selected = headlineVariants[parseInt(variant)];
-document.getElementById('hero-headline').innerHTML = selected.html;
-window.veloraVariant = selected.label;
+
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
