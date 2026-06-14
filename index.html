@@ -95,7 +95,22 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   margin-bottom: var(--space-sm);
 }
-
+#portfolioPopup {
+  position: fixed;
+  inset: 0;
+  background: rgba(45,45,45,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 300;
+}
+#portfolioPopup.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
 .btn {
   display: inline-flex;
   align-items: center;
@@ -585,6 +600,9 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
 </head>
 <body>
 
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
 <header class="header">
   <div class="container header-inner" style="max-width: none;">
     <a href="/" class="logo">
@@ -592,9 +610,12 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
       Velora Skin
     </a>
     <a href="#order" class="btn btn-primary" data-cta="header">ابدئي علاج بشرتك اليوم</a>
-</div>
+  </div>
 </header>
 
+<!-- ============================================================
+     HERO
+     ============================================================ -->
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-content">
@@ -606,7 +627,7 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
       </div>
 
       <div class="hero-cta-group">
-        <a href="#order" class="btn btn-primary btn-large" data-cta="hero-primary">اطلبيه الآن</a>
+        <a href="#" class="btn btn-primary btn-large" data-cta="hero-primary" id="heroPopupBtn">اطلبيه الآن</a>
         <a href="#how-it-works" class="btn btn-secondary btn-large" data-cta="hero-secondary">شاهدي كيف يعالج بشرتك</a>
       </div>
 
@@ -625,6 +646,9 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
   </div>
 </section>
 
+<!-- ============================================================
+     PROBLEM & SOLUTION
+     ============================================================ -->
 <section class="section problem-solution" id="how-it-works">
   <div class="container">
     <div class="section-header reveal">
@@ -656,6 +680,9 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
   </div>
 </section>
 
+<!-- ============================================================
+     BENEFITS
+     ============================================================ -->
 <section class="section">
   <div class="container">
     <div class="section-header reveal">
@@ -683,6 +710,9 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
   </div>
 </section>
 
+<!-- ============================================================
+     INGREDIENTS
+     ============================================================ -->
 <section class="section ingredients">
   <div class="container">
     <div class="section-header reveal">
@@ -719,6 +749,9 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
   </div>
 </section>
 
+<!-- ============================================================
+     BEFORE & AFTER
+     ============================================================ -->
 <section class="section before-after">
   <div class="container">
     <div class="section-header reveal">
@@ -741,6 +774,9 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
   </div>
 </section>
 
+<!-- ============================================================
+     REVIEWS
+     ============================================================ -->
 <section class="section reviews">
   <div class="container">
     <div class="section-header reveal">
@@ -785,6 +821,9 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
   </div>
 </section>
 
+<!-- ============================================================
+     URGENCY / ORDER
+     ============================================================ -->
 <section class="section urgency" id="order">
   <div class="container">
     <div class="urgency-content reveal">
@@ -812,6 +851,9 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
   </div>
 </section>
 
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
 <section class="section">
   <div class="container">
     <div class="section-header reveal">
@@ -843,6 +885,9 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
   </div>
 </section>
 
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
 <footer class="footer">
   <div class="container">
     <div class="footer-logo">
@@ -859,10 +904,16 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
   </div>
 </footer>
 
+<!-- ============================================================
+     STICKY CTA
+     ============================================================ -->
 <div class="sticky-cta" id="stickyCta">
   <a href="#order" class="btn btn-primary" data-cta="sticky">اطلبيه الآن</a>
 </div>
 
+<!-- ============================================================
+     POPUP — Email Discount
+     ============================================================ -->
 <div class="popup-overlay" id="popup">
   <div class="popup" id="popupBox">
     <button class="popup-close" id="popupClose" aria-label="إغلاق">×</button>
@@ -878,6 +929,24 @@ html[dir="rtl"] .ba-after { clip-path: inset(0 50% 0 0); }
   </div>
 </div>
 
+<!-- ============================================================
+     POPUP — Portfolio
+     ============================================================ -->
+<div class="popup-overlay" id="portfolioPopup">
+  <div class="popup" id="portfolioPopupBox">
+    <button class="popup-close" id="portfolioPopupClose">×</button>
+    <div class="popup-badge">تجربة توضيحية</div>
+    <h3>هذا مجرد مشروع تجريبي</h3>
+    <p>هذا اللاندينق بيج من أعمالي في تصميم صفحات الهبوط  
+      تبين تشوفين كيف بنيته خطوة بخطوة؟</p>
+    <a href="PORTFOLIO.html" class="btn btn-primary btn-large">نعم، عرض البورتفوليو</a>
+    <button class="btn btn-secondary btn-large" id="stayHereBtn">لا، أكمّل التجربة</button>
+  </div>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
 <script>
 
 
@@ -956,7 +1025,9 @@ window.addEventListener('scroll', () => {
     if (window.ttq) ttq.track('ViewContent', { content_id: 'exit_popup' });
   }
   function hide() { popup.classList.remove('visible'); }
-
+  document.getElementById('heroPopupBtn').addEventListener('click', function(e) {e.preventDefault();
+  show();
+  });
   document.addEventListener('mouseout', (e) => { if (e.clientY <= 0 && !e.relatedTarget) show(); });
   let lastScrollY = window.scrollY, lastScrollTime = Date.now();
   window.addEventListener('scroll', () => {
@@ -994,6 +1065,27 @@ document.querySelectorAll('.faq-item').forEach(item => {
     item.querySelector('.faq-icon').textContent = item.open ? '−' : '▼';
   });
 });
+
+const portfolioPopup = document.getElementById('portfolioPopup');
+const portfolioClose = document.getElementById('portfolioPopupClose');
+const stayHereBtn = document.getElementById('stayHereBtn');
+
+// زر الـ CTA الأساسي (الهيرو + أي زر تبين)
+document.querySelectorAll('[data-cta="hero-primary"], [data-cta="urgency"]').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    portfolioPopup.classList.add('visible');
+  });
+});
+
+portfolioClose.addEventListener('click', () => {
+  portfolioPopup.classList.remove('visible');
+});
+
+stayHereBtn.addEventListener('click', () => {
+  portfolioPopup.classList.remove('visible');
+});
 </script>
+
 </body>
 </html>
